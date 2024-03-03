@@ -1,0 +1,11 @@
+# .NET Core
+bin/
+obj/
+*.userprefs
+
+# Visual Studio
+.vscode/
+.vs/
+*.suo
+*.user
+*.sln.docstates

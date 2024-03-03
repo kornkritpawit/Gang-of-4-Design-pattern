@@ -1,0 +1,5 @@
+Starter project: https://github.com/utarn/csharp-design-pattern-strategy/tree/913e4e5864f48219d667167f782436aada7a77ae
+Finish project: https://github.com/utarn/csharp-design-pattern-strategy
+
+Strategy Pattern:
+ออกแบบเพื่อแก้ปัญหา การสร้าง Method หรือ อัลกอรทึมซ้ำซ้อน คลาส 1 คลาส ตัวอย่างเช่นใน 

@@ -1,0 +1,32 @@
+Starter project: https://github.com/utarn/csharp-design-pattern-iterator/tree/1c89c6d7b48a9b0d52d8dfff136eb2f845097d55
+Finish project: https://github.com/utarn/csharp-design-pattern-iterator/tree/06f5e6b2b4082f53a8b399bd93dff3f291586d9f
+
+Iterator pattern-1:
+ออกแบบมาเพื่อ แก้ไข ปัญหา Browser History ที่เก็บ History ในรูป Object ต่างๆ
+ถ้าเกิด Object History มีการเพิ่มหรือแก้ไข Object จะทำให้ต้องแก้ไข การ for loop (ใน Program.cs)
+History และอื่นๆอีก เช่นเปลี่ยน List<BrowserHistory> เป็น BrowserHistory[]
+หรือ array Browser History การ วน loop และอื่นๆ ก็จะต้องเปลี่ยน
+
+วิธีแก้:
+สร้าง Interface Iterator ที่มี method bool HasNext(), T Current(), void Next()
+
+Class Browser:
+- property obj BrowserHistory, int index
+- PushHistory (มีอยู่แล้ว)
+- PopHistory (มีอยู่แล้ว)
+- Iterator<BrowserHistory> CreateIterator()
+	สร้าง ListIterator or ArrayIterator
+- subclass ArrayIterator : Iterator<BrowserHistory> หรือ ListIterator
+	- รับ Browser _browser, property _index
+	- เพิ่ม คำสั่ง ใน Current, HasNext(), Next()
+
+Program.cs: ใช้แบบนี้ แทน For loop โดยที่ ถ้า history จะเป็น type List หรือ Array[]
+ก็สามารถใช้ โค้ดนี้ได้ โดยที่ไม่ต้องแก้ไขอะไร
+
+            var iterator = browser.CreateIterator();
+            while (iterator.HasNext())
+            {
+                var currentHistory = iterator.Current();
+                Console.WriteLine(currentHistory);
+                iterator.Next();
+            }
