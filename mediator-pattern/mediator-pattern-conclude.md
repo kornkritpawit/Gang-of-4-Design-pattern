@@ -66,7 +66,7 @@ Design: version นำ dotnetcore Observer pattern มาช่วย
 		-protect void NotifyEventHandlers() { foreach(var eventHandlers in _eventHandlers){
 			eventHandlers.Invoke();}}
 	- Class Button, Listbox, Textbox: ลบ Constructor ออก, เปลี่ยน _owner.OnChanged เป็น NotifyEventHandlers();
-	- Class ArticleDialogBox *ไม่มี implement*: 
+	- Class ArticleDialogBox *ไม่มี implement*: ลบ override void Onchanged ออก
 		- Constructor(): _articleListBox = new ListBox();
 			_articleListBox.AddEventHandler(articleChanged); _titleTexBox = new TextBox();
 			_titleTexBox.AddEventHandler(titleChanged); _saveButton = new ButtonObserver();
