@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using visitor_pattern;
 
 namespace pattern_visitor
 {
@@ -14,5 +15,19 @@ namespace pattern_visitor
         {
             _nodes.Add(node);
         }
+
+        // public void Highlight() {
+        //     foreach (var node in _nodes)
+        //     {
+        //         node.Highlight();
+        //     }
+        // }
+        public void Execute(Operation operation) {
+            foreach (var node in _nodes)
+            {
+                node.Execute(operation);
+            }
+        }
+
     }
 }

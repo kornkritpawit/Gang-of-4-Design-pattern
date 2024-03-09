@@ -6,15 +6,15 @@ using pattern_visitor;
 
 namespace visitor_pattern
 {
-    public class AnchorNode : HtmlNode
+    public class HeadingNode : HtmlNode
     {
         // public void Highlight()
         // {
-        //     Console.WriteLine("highlight-anchor");
+        //     Console.WriteLine("highlight-heading");
         // }
         // public void PlainText()
         // {
-        //     Console.WriteLine("text-anchor");
+        //     Console.WriteLine("text-heading");
         // }
         public void Execute(Operation operation)
         {
