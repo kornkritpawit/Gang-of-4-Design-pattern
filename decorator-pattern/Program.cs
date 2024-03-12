@@ -8,10 +8,12 @@ namespace pattern_decorator
         static void Main(string[] args)
         {
             var data = "This is uploading data.";
-            // var cloudStream = new CloudStream();
-            // var cloudStream = new EncryptedCloudStream();
-            // var cloudStream = new CompressCloudStream();
-            // var cloudStream = new EncryptAndCompressCloudStream();
+            var cloudStream1 = new CloudStream();
+            var cloudStream2 = new EncryptedCloudStream();
+            var cloudStream3 = new CompressCloudStream();
+            var cloudStream4 = new EncryptAndCompressCloudStream();
+            // cloudStream1.Write(data);cloudStream2.Write(data);
+            // cloudStream3.Write(data);cloudStream4.Write(data);
             // class เยอะแยะไปหมด ถ้าทำ แบบ Inheritance
 
             var cloudStream = new CloudStreamDec();
@@ -20,13 +22,13 @@ namespace pattern_decorator
             var compressAndEncrypt = new CompressCloudStreamDec(encryptedStream);
             var encryptedAndCompress = new EncryptedCloudStreamDec(compressStream);
 
-            // cloudStream.Write(data);
-            // compressStream.Write(data);
-            // encryptedStream.Write(data);
-            // compressAndEncrypt.Write(data);
-            // encryptedAndCompress.Write(data);
+            cloudStream.Write(data);
+            compressStream.Write(data);
+            encryptedStream.Write(data);
+            compressAndEncrypt.Write(data);
+            encryptedAndCompress.Write(data);
 
-            // WriteCreditCard(encryptedAndCompress);
+            WriteCreditCard(encryptedAndCompress);
             WriteCreditCard(compressStream);
             //ก็คือ สร้าง Class implement Stream มี constructor แล้วก็เพิ่มคุณสมบัติเข้าไป
             //เพิ่มลบ สลับลำดับได้ตามต้องการ
