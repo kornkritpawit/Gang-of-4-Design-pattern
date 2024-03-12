@@ -28,3 +28,25 @@ Output:
 ```
 ตัวอย่างนี้จะ Error เพราะ imageView Apply Caramel ที่เป็น thirdparty ตรงๆ ไม่ได้
 ไม่ใช่ เพราะ Apply รับ Filter และการทำงานจริงเราก็จะแก้ thirdparty ไม่ได้
+
+Design2:
+- สร้าง class CaramelFilter implement Filter: pri Caramel _caramel;
+	- Constructor(Caramel caramel){_caramel=caramel;}
+	- pub void Apply(Image image){_caramel.Init(); _caramel.Render(image);}
+	- เป็น Adapter pattern แบบ Composition
+- สร้าง class CaramelAdapter implement Caramel, Filter:
+	- pub void Apply(Image image){Init(); Render(image);}
+	- Adapter pattern แบบ ตรงๆ (Inheritance)
+
+ตัวอย่างใน Program.cs
+```			..
+            imageView.Apply(new CaramelFilter(new Caramel())); //รับเป็นทอดๆ ( Composition )
+            imageView.Apply(new CaramelAdapter()); //Inheritance
+            // Choose composition over Inheritance
+Output: ..
+	Applying caramel filter
+	Applying caramel filter
+```
+<br> ในงานจริงใช้แบบ Composition ดีกว่า Inheritance ตรงๆ เพราะ ถ้าทำแบบตรงๆ ต้องสร้างไฟล์
+ในทุกๆ thirdparty filter แต่ถ้าทำแบบ Composition ก้แก้แค่ไฟล์เดียว คือ CaramelFilter
+และ ส่งค่าผ่าน Parameter อย่างเดียว
