@@ -1,4 +1,7 @@
 # Strategy Pattern Conclusion
+- Starter Project: https://github.com/utarn/csharp-design-pattern-strategy/tree/913e4e5864f48219d667167f782436aada7a77ae
+- Finish Project: https://github.com/utarn/csharp-design-pattern-strategy
+# Strategy Pattern Conclusion
 หน้าที่ของ Strategy Pattern คือ ออกแบบมาเพื่อแก้ปัญหา การสร้าง Method หรือ อัลกอรทึมซ้ำซ้อน ใน คลาส 1 คลาส ตัวอย่างเช่นขั้นตอนใน การ Upload รูปภาพเก็บไว้ใน Storage ได้แก่ 
 
 1. Compress รูปภาพ if PNG => PNGCompress(file), if JPEG => JPEGCompress(file)
@@ -22,8 +25,3 @@
 ImageStorage imgStorage = new CloudImageStorage(new JpegCompressor(new BlackWhiteFilter());
 imgStorage.Store("abc");
 ```
-## Link
-Starter Project: 
-https://github.com/utarn/csharp-design-pattern-strategy/tree/913e4e5864f48219d667167f782436aada7a77ae
-
-Finish Project: https://github.com/utarn/csharp-design-pattern-strategy

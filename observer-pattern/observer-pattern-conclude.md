@@ -1,7 +1,6 @@
 # Observer Pattern Conclude
-Starter project: https://github.com/utarn/csharp-design-pattern-observer/tree/41a9e5d9552819f0dca90267a589fd29d5f87e96
-
-Finish project: https://github.com/utarn/csharp-design-pattern-observer/tree/1835757e527912a269d1eece34383398d7bdb38c
+- Starter project: https://github.com/utarn/csharp-design-pattern-observer/tree/41a9e5d9552819f0dca90267a589fd29d5f87e96
+- Finish project: https://github.com/utarn/csharp-design-pattern-observer/tree/1835757e527912a269d1eece34383398d7bdb38c
 
 # Observer Pattern Conclude
 ออกแบบมาเพื่อให้การเปลี่ยนแปลงของวัตถุหนึ่งสามารถเผยแพร่ไปยังวัตถุอื่น 
