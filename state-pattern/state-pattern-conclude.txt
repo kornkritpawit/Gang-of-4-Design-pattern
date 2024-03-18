@@ -1,0 +1,49 @@
+Starter project: https://github.com/utarn/csharp-design-pattern-state/tree/cf1d4f6f7de42587329c2f5676b49dd840a33bd9
+Finish project: https://github.com/utarn/csharp-design-pattern-state/tree/8857eb8f93308b8c2b1bc91a518cde903e1859ca
+
+State pattern:
+แก้ไขปัญหา การทำงานของ object ที่มี State ต่างๆ
+เช่น โปรแกรม Paint ที่ Cursor(Mouse) จะมี State ต่างๆ
+ได้แก่ Pen, Selection, Erasor เป็นต้น
+เวลา กดเมาส์ก็จะวาดรูป ปล่อยเม้าส์หยุดวาด หรือลบ 
+
+วิธีแก้ปัญหา (ยุ่งยาก):
+Class ToolType: มี Selection, Brush, eraser
+    - เป็น ค่า enum State ของ Cursor
+
+Class Canvas (Cursor): - CurrentToolType
+    - mouseDown(): เช็คเงื่อนไข Tooltype เป็นอะไรให้ทำอะไร
+    - mouseUp(): เช็คเงื่อนไข Tooltype เป็นอะไรให้ทำอะไร
+ข้อเสีย: ถ้ามี tool เพิ่มขึ้นก็ต้องใส่ เงื่อนไขเพิ่มขึ้นในแต่ละ function,
+มีคลาสเพิ่มก็ต้อง ใส่เงื่อนไขเพิ่ม
+
+วิธีแก้ปัญหา (Final):
+Class Tool: เป็น Interface สำหรับ function mouseDown() mouseUp()
+หรืออื่นๆ ในอนาคต เช่น keyDown, keyUp
+
+Class BrushTool: จะ implement Tool interface
+แล้วใส่ หน้าที่ของ function mouseDown(), mouseUp() ให้ทำอะไร
+
+สามารถสร้าง EraseTool, BucketTool,etc. ใช้วิธีเหมือน BrushTool
+
+Class Canvas: 
+- Tool CurrentToolType เก็บ State ของ Tool ว่าใช้ State อะไร
+เช่า BrushTool, EraseTool, etc.
+- mouseDown() ใช้คำสั่ง mouseDown ของ currentToolState ที่ได้รับมา
+- mouseDown() ใช้คำสั่ง mouseUp ของ currentToolState ที่ได้รับมา
+
+ข้อดีของ State Pattern คือสามารถสร้างไฟล์ XXTool ได้เรื่อยๆ
+ข้อเสียคือ ถ้า โปรแกรม Feature น้อย จะยุ่งยาก ไม่คุ้มกับการสร้าง
+
+ตัวอย่าง Class StopWatch 
+วิธี Basic: เก็บ state ว่า IsRunning, ถ้า Click() เช็ค IsRun แล้ว Stop
+หรือ Run
+
+วิธี ยุ่งยาก: สร้าง StopWatchState มาเป็น Interface ที่มี method Click()
+สร้าง Class RunningState และ StoppedState ที่ Implement Interface
+StopWatchState 
+Class Stopwatch จะเก็บ CurrentState ซึ่งจะเป็น RunningState, StoppedState
+ถ้า Stopwatch.Click() แล้วก็จะ ใช้ CurrentState.Click() ของ RunningState
+หรือ StoppedState, ถ้า StoppedState ก็จะเปลี่ยน CurrentState เป็น
+RunningState และตรงข้ามกัน 
+
