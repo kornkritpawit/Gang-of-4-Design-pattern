@@ -11,7 +11,7 @@ namespace pattern_memento
         public Memento(T serializeObject)
         {
             Type = typeof(T).ToString();
-            Console.WriteLine(Type);
+            System.Console.WriteLine(Type);
             _serializedData = JsonConvert.SerializeObject(serializeObject);
         }
 

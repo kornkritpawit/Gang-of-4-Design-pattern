@@ -33,3 +33,16 @@ Memento pattern:
     - CreateState() => Memento<Editor
     - RestoreState(Memento Editor) รับ Memento มาแล้ว set Property
 
+Output:
+T1 Text 1 TH SarabunPSK 14
+pattern_memento.Editor
+T2 Text 2 TH SarabunPSK 15
+pattern_memento.Editor
+T3 Text 3 TH Sarabun New 16
+T2 Text 2 TH SarabunPSK 15
+T1 Text 1 TH SarabunPSK 14
+T1 Text 1 TH SarabunPSK 14
+T3 Text 3 TH Sarabun New 16
+pattern_memento.Editor
+T4 Text 4 TH Sarabun New 17
+T3 Text 3 TH Sarabun New 16

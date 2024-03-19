@@ -13,7 +13,6 @@ namespace pattern_state
                 _isRunning = true;
                 Console.WriteLine("Running");
             }
-
         }
     }
 }

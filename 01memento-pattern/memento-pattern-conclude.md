@@ -3,27 +3,23 @@
 - Finish project: https://github.com/utarn/csharp-design-pattern-memento/tree/ce5e8821e707e1286a038102179edc2d5a0fd446
 # Memento Pattern Conclude
 เป็นการแก้ปัญหาการ Undo, Redo ของ Object และสถานะต่างๆใน Object
-- Class Editor
-    Property: Title, Text
 
-1. วิธีแก้ แบบไม่ดี เพิ่ม HistoryListTitle, HistoryListText
-(ไม่ดีเพราะต้องเพิ่ม HistoryList ในทุก Property)
-
-Design Final:
-- Class Memento 
-    - เป็น class ที่ถูกสร้างเพื่อส่งต่อข้อมูล Object ไปยัง CareTaker
-
-- Class CareTaker
-    - มีหน้าที่เก็บ histories ของ State ใน Object
-    - HistoryList<Memento>
-    - lastIndex (start = -1)
-    - Undo() return HistoryList[lastIndex--]
-            - (รีเทิร์น เสร็จแล้วลด 1 index)
-    - Redo() return HistoryList[lastIndex++]
-            - (รีเทิร์น เสร็จแล้วเพิ่ม 1 index)
-    - PushMemento(Memento) ลบประวัติ Redo ก่อนหน้า และ push memento state ใหม่
-
-- Class Editor
-    - Property: Title, Text
-    - CreateState() => Memento<Editor
-    - RestoreState(Memento Editor) รับ Memento มาแล้ว set Property
+Design 1:
+- Class Editor:	pub str Title {get; pri set;} pub IList<str>Previous_Title {get;set;}
+	- pub str Text {get; pri set;} pub IList<str>Previous_Text {get; set;}
+	- pub int FontSize {get; pri set;} pub IList<string> Previous_FontSize{get; set;}
+	- pub string FontFace {get; pri set;}
+	
+ข้อเสีย: ไม่ดีเพราะต้องเพิ่ม IList(HistoryList) ในทุก Property เขียนโค้ดเยอะ<br>
+Design 2: using Newtonsoft.Json;
+- class Editor: pub str Title {get; pri set;} pub str Text {get; pri set;}
+	- pub int FontSize {get; pri set;} pub str FontFace {get; pri set;}
+	- Constructor(str title, str text, int fontSize, str fontFace){
+		this.Title=title;this.Text=text;this.FontSize=fontSize;this.FontFace=fontFace;}
+	pub Memento<Editor> CreateState() {return new Memento<Editor>(this)}
+- Class Memento<T>: เป็น class ที่ถูกสร้างเพื่อส่งต่อข้อมูล Object ไปยัง CareTaker
+	- pub str Type {get;} pri readonly str _serializedData;
+	- pub T Object => JsonConvert.DeserializeObject<T>(_serializedData);
+	- constructor(T serializeObject){Type=typeof(T).ToString();
+		_serializedData = JsonConvert.SerializeObject(serializeObject);}
+		

@@ -14,9 +14,12 @@ namespace pattern_state
             // //BrushTool.cs, BucketTool.cs, CanvasState.cs, EraseTool.cs, SelectionTool.cs, Tool.cs, ToolType.cs
             // var newCanvas = new CanvasStatePt();
             // newCanvas.CurrentToolType = new BrushTool();
+            // newCanvas.mouseDown();
+            // newCanvas.mouseUp();         
             // newCanvas.CurrentToolType = new SelectionTool();
+            // newCanvas.mouseDown();
+            // newCanvas.mouseUp();            
             // newCanvas.CurrentToolType = new BucketTool();
-
             // newCanvas.mouseDown();
             // newCanvas.mouseUp();
 
@@ -26,9 +29,9 @@ namespace pattern_state
             // ลด การเขียน ifelse series ลดโอกาสเขียนโค้ดผิด
 
             // StopWatchStatePt.cs, StopWatchState.cs, StoppedState.cs , RunningState.cs
-            // var sw = new StopWatch(); //บาง feature ไม่จำเป็นต้องทำ State เพราะจะ ยุ่งยาก
+            var sw = new StopWatch(); //บาง feature ไม่จำเป็นต้องทำ State เพราะจะ ยุ่งยาก
             // นาฬิกา มีแค่ run stop ไม่มีว่าจะเพิ่ม state เพิ่มจริงๆก็ไม่ต้องใช้ state ถ้ามี tool เยอะก็ใช้ดี
-            var sw = new StopWatchStatePt();
+            // var sw = new StopWatchStatePt();
             sw.Click();
             sw.Click();
             sw.Click();

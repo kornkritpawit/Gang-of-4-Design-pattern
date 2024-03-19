@@ -16,6 +16,8 @@ namespace pattern_state
             // sw.Click();
             // sw.Click();
             
+            //Open Closed Design: Open ore extension/ CLose for modification
+
             var sw2 = new StopWatch();
             sw2.Click();
             sw2.Click();

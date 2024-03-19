@@ -11,9 +11,13 @@ namespace pattern_memento
         }
 
         public string Title { get; private set; }
+        // public IList<string> Previous_Title {get; set;}
         public string Text { get; private set; }
+        // public IList<string> Previous_Text {get; set;}
         public int FontSize { get; private set; }
+        // public IList<string> Previous_FontSize {get; set;}
         public string FontFace { get; private set; }
+        
         
         public Memento<Editor> CreateState()
         {

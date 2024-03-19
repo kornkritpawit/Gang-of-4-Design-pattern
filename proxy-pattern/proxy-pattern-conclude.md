@@ -1,7 +1,6 @@
 # Proxy  Pattern Conclude
 - Starter project: https://github.com/utarn/csharp-pattern-proxy/tree/eb2021810c0f3083086c2207154cbbf101ea6a37
 - Finish project: https://github.com/utarn/csharp-pattern-proxy/tree/671bfeef22089b8e4d4d9bf8d460fda4ef8a298b
-
 # Proxy  Pattern Conclude
 ช่วยสร้างคลาสที่เป็นตัวแทนคลาสเดิม โดยคลาสตัวแทนจะเป็นตัวส่งผ่านการทำงานไปยังวัตถุคลาสจริง
 โดยที่เราสามารถเพิ่มคุณสมบัติให้กับวัตถุคลาสจริงได้ ในปัจจุบันนิยมใช้เป็นคุณสมบัติ Lazy loading 

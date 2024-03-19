@@ -10,7 +10,6 @@ namespace pattern_state
         {
             CurrentToolType.mouseDown();
         }
-
         public void mouseUp()
         {
             CurrentToolType.mouseUp();
