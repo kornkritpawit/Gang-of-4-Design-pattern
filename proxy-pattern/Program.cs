@@ -14,8 +14,8 @@ namespace pattern_proxy
             {
                 // library.AddBook(new Book(fileName));
                 // library.AddBook(new BookProxy(fileName));
-                // library.AddBook(new BookLoggingProxy(fileName));
-                library.AddBook(new RealBook(fileName)); // โหลดทุกเล่ม
+                library.AddBook(new BookLoggingProxy(fileName));
+                // library.AddBook(new RealBook(fileName)); // โหลดทุกเล่ม
             }
             // Loading book a,b,c 
             //ในความจริงถ้า หนังสือเยอะ โหลดเข้าเมมเยอะ

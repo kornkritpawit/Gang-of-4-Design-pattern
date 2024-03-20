@@ -11,13 +11,11 @@ namespace pattern_proxy
             this.fileName = fileName;
             Load();
         }
-
         private void Load() {
             System.Console.WriteLine("Loading book " + fileName);
         }
         public void Show() {
             System.Console.WriteLine("Showing book " + fileName);
         }
-
     }
 }
