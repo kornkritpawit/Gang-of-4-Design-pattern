@@ -11,7 +11,6 @@ namespace pattern_iterator
         }
         public string Url { get; }
         public DateTime AccessTime { get; }
-
         public override string ToString()
         {
             return $"{Url} Access at {AccessTime}";
