@@ -17,13 +17,15 @@ namespace pattern_iterator_netcore
         }
         public BrowserHistory PopHistory()
         {
-            var lastElement = _histories[^1];
+            var lastElement = _histories[^1]; //^1=ตัวสุดท้าย, ^2=ตัวรองสุดท้าย
             _histories.Remove(lastElement);
             return lastElement;
         }
 
         public IEnumerator<BrowserHistory> GetEnumerator()
         {
+            // มี function นี้เพราะ ใช้ type IEnumerable<BrowserHistory>
+            // Cask ให้เป็น BrowserHistory
             return new ListIterator(this);
         }
 
@@ -41,6 +43,8 @@ namespace pattern_iterator_netcore
                 _index = -1;
             }
             public BrowserHistory Current => _browser._histories[_index];
+            // มี function นี้เพราะ ใช้ type IEnumerable<BrowserHistory>
+            // Cask ให้เป็น BrowserHistory
 
             object IEnumerator.Current => Current;
 
