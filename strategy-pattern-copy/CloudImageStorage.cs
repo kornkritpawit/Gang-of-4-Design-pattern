@@ -15,7 +15,7 @@ namespace strategy_pattern
 
         public override void Store(string fileName)
         {
-            _compressor.Compress(fileName); //sibling กันกับ LocalImage ส่งข้อมูลหากันได้
+            _compressor.Compress(fileName);
             _filter.Filter(fileName);
             Console.WriteLine($"Storing image {fileName} to cloud.");
         }

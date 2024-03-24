@@ -8,9 +8,9 @@ namespace pattern_strategy
         static void Main(string[] args)
         {
             // var imgStorage = new LocalImageStorage("JPEG", "BW");
-            
-            // ImageStorage imgStorage = new LocalImageStorage(new JpegCompressor(), new BlackWhiteFilter());
-            ImageStorage imgStorage = new CloudImageStorage(new JpegCompressor(), new BlackWhiteFilter());
+            // var imgStorage = new LocalImageStorageStrategy1(new JpegCompressor(), new BlackWhiteFilter());            
+            ImageStorage imgStorage = new LocalImageStorageStrategyFinal(new JpegCompressor(), new BlackWhiteFilter());
+            // ImageStorage imgStorage = new CloudImageStorage(new JpegCompressor(), new BlackWhiteFilter());
             imgStorage.Store("abc");
         }
     }
