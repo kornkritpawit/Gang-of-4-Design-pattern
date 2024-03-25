@@ -12,6 +12,5 @@ namespace pattern_strategy
             _filter = filter;
         }
         public abstract void Store(string fileName);
-
     }
 }

@@ -9,9 +9,10 @@ namespace pattern_strategy
         {
             // var imgStorage = new LocalImageStorage("JPEG", "BW");
             // var imgStorage = new LocalImageStorageStrategy1(new JpegCompressor(), new BlackWhiteFilter());            
-            ImageStorage imgStorage = new LocalImageStorageStrategyFinal(new JpegCompressor(), new BlackWhiteFilter());
-            // ImageStorage imgStorage = new CloudImageStorage(new JpegCompressor(), new BlackWhiteFilter());
-            imgStorage.Store("abc");
+            ImageStorage localImgStorage = new LocalImageStorageStrategyFinal(new JpegCompressor(), new BlackWhiteFilter());
+            ImageStorage cloudImgStorage = new CloudImageStorage(new JpegCompressor(), new BlackWhiteFilter());
+            localImgStorage.Store("abc");
+            cloudImgStorage.Store("abc");
         }
     }
 }

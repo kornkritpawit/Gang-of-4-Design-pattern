@@ -10,9 +10,7 @@ namespace strategy_pattern
     {
         public CloudImageStorage(Compressor compressor, Filter filter) : base(compressor, filter)
         {
-
         }
-
         public override void Store(string fileName)
         {
             _compressor.Compress(fileName); //sibling กันกับ LocalImage ส่งข้อมูลหากันได้

@@ -2,9 +2,10 @@
 
 - Starter project: https://github.com/utarn/csharp-design-pattern-command/tree/7af70cfda0905a29b5a6f648899b80be64a6d46f
 - Finish project: https://github.com/utarn/csharp-design-pattern-command
+# Command Pattern
+ออกแบบมาเพื่อแก้ไขปัญหาความเข้ากันได้ระหว่าง library 2 package ที่ถูกสร้างมาไม่พร้อมกัน เช่น ในขั้นตอนการออกแบบ framework นั้น ผู้ออกแบบ framework ไม่สามารถทราบล่วงหน้าได้เลยว่า class ที่ถูกออกแบบนี้จะถูกสั่งให้ทำงานอะไร เช่น class Button ผู้ออกแบบสามารถออกแบบปุ่ม และลักษณะการทำงานเพื่อตอบสนองการคลิกได้ แต่การที่ปุ่มหนึ่งจะคลิกแล้วเกิดเหตุการณ์อะไรนั้น เป็นเรื่องของนักพัฒนาแอพลิกเคชันที่นำไปใช้ต่อ ดังนั้น Command pattern จึงถูกออกแบบมาให้ผู้พัฒนาสามารถกำหนดพฤติกรรมของ Button ได้โดยที่ไม่ต้องแก้ไข class Button ที่มากับ framework
 
 # Command Pattern
-
 Command pattern ถูกออกแบบมา เพื่อแก้ไขปัญหาความเข้ากันได้ระหว่าง library 2 package ที่ถูกสร้างมาไม่พร้อมกัน 
 เช่น class Button ที่เป็น Builtin Library เราไม่รู้ว่า Click() และมี Library Customerservice, OrderService 
 ซึ่งถ้า Click แล้วให้ใช้ Customerservice หรือ OrderService ต่อ แล้วเราจะ Design การเขียนโค้ดยังไง 
