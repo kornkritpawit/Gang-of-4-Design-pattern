@@ -13,8 +13,8 @@ namespace pattern_template_method
             // transferTask.DoExecute(); // ทำไม่ได้ เพราะ function เป็น protect
             var reportTask = new GenerateReportTask();
             reportTask.Execute();
-
-            // เมื่อมีงานที่ต้องบังคับการเขียนให้เป็นตามแบบ แล้วเรากลัว Programmer ไม่ยอมเขียนตามแบบนั้นให้ใช้ pattern นี้ เพราะเหมือนเป็นการบังคับให้ทำตามนี้ดด
+            // เมื่อมีงานที่ต้องบังคับการเขียนให้เป็นตามแบบ แล้วเรากลัว Programmer 
+            //ไม่ยอมเขียนตามแบบนั้นให้ใช้ pattern นี้ เพราะเหมือนเป็นการบังคับให้ทำตามนี้ดด
         }
     }
 }
