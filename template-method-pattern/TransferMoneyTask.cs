@@ -14,7 +14,7 @@ namespace template_method_pattern
         public TransferMoneyTask(AuditTrail auditTrail) : base(auditTrail)
         {
         }
-        protected override void DoExecute() //protected จะใช้ได้เฉพาะ function ใน template method
+        protected override void DoExecute() //protected จะใช้ได้เฉพาะ function ใน TransferMoneyTask หรือ TemplateMethod
         {
             Console.WriteLine("Transfer money");
         }
