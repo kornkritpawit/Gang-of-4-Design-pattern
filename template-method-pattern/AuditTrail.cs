@@ -8,7 +8,6 @@ namespace pattern_template_method
         {
             Console.WriteLine("Start logging transaction");
         }
-
         public void Stop()
         {
             Console.WriteLine("Stop logging transaction");

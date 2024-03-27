@@ -4,7 +4,7 @@ Starter project: https://github.com/utarn/csharp-design-pattern-template-method/
 Finish project: https://github.com/utarn/csharp-design-pattern-template-method/tree/ead3fd2ad9e3cb0b8090a0eef3a33a925b784c17
 
 # Template Method pattern
-ออกแบบมาเพื่อบังคับการเขียน Method ทำให้การพัฒนาโค้ดในทีมมีทิศทางในการเขียนโค้ดที่เหมือนกัน 
+ออกแบบมาเพื่อบังคับการเขียน Method ทำให้การพัฒนาโค้ดในทีมมีทิศทางในการเขียนโค้ดที่เหมือนกัน
 เช่น การทำ logging ก่อนเริ่มทำงาน หรือ 
 การ clean up ข้อมูลหลังจบการทำงาน เป็นต้น ทำให้มั่นใจได้ว่า 
 โค้ดที่พัฒนาออกมาจะต้องทำงานในรูปแบบที่กำหนดเหมือนกันทั้งหมด
