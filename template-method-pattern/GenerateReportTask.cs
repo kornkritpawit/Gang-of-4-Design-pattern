@@ -9,9 +9,7 @@ namespace template_method_pattern
     {
         public GenerateReportTask()
         {
-
         }
-
         protected override void DoExecute()
         {
             Console.WriteLine("Generate Report");
