@@ -11,7 +11,8 @@ namespace observer_pattern
     }
     public interface ObServer<T>
     {
-        // วิธีแบบ push เพื่อแยก type ออกจากกัน
+        // วิธีแบบ push notification (มี input)
+        // พื่อแยก type ออกจากกัน
         void Update(T value);
 
     }
