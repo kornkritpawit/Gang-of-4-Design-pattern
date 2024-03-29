@@ -11,7 +11,7 @@ namespace pattern_observer
 
         public void Update(int value)
         {
-            Console.WriteLine("Got notified from dataSource: " + value);
+            Console.WriteLine("Got notified from dataSource Chart: " + value);
         }
     }
 }
