@@ -21,7 +21,7 @@ namespace observer_pattern
         {
             _observers.Remove(obServer);
         }
-        public void NotifyObserver(int value)
+        public void NotifyObserver()
         {
             foreach (var observer in _observers)
             {

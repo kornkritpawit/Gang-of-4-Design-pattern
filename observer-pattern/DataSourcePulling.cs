@@ -14,7 +14,7 @@ namespace pattern_observer
             set
             {
                 _data = value;
-                NotifyObserver(_data);
+                NotifyObserver();
             }
         }
     }
