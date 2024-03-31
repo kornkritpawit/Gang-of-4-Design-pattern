@@ -11,7 +11,6 @@ namespace observer_pattern
         private List<ObServer> _observers;
         public Subject()
         {
-            // _observers = new List<ObServer<int>>();
             _observers = new List<ObServer>();
         }
         public void AddObserver(ObServer obServer)
@@ -26,7 +25,6 @@ namespace observer_pattern
         {
             foreach (var observer in _observers)
             {
-                // observer.Update(value);
                 observer.Update();
             }
         }
