@@ -23,7 +23,7 @@ namespace pattern_observer_netcore
 
         public void OnError(Exception error)
         {
-            // throw new NotImplementedException();
+            // throw new NotImplementedException(); // Do nothing
         }
 
         public void OnNext(Stock value)
