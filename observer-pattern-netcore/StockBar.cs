@@ -15,23 +15,19 @@ namespace pattern_observer_netcore
             }
             _stocks.Add(stock);
         }
-
         public void OnCompleted()
         {
             Console.WriteLine("Done!");
         }
-
         public void OnError(Exception error)
         {
-            // throw new NotImplementedException(); // Do nothing
+            // throw new NotImplementedException(); // (Do nothing)
         }
-
         public void OnNext(Stock value)
         {
             AddStock(value);
             Show();
         }
-
         public void Show()
         {
             Console.WriteLine("===== STOCK LIST =========");
@@ -41,7 +37,6 @@ namespace pattern_observer_netcore
             }
             Console.WriteLine("==========================");
         }
-
         public void Subscribe(IObservable<Stock> provider) {
             _unsubscriber = provider.Subscribe(this);
         }

@@ -10,20 +10,11 @@ namespace observer_pattern_netcore
     {
         private List<IObserver<Stock>> _observers;
         private List<Stock> _stocks;
-        
-
-        // public StockProvider(List<IObserver<Stock>> observers, List<Stock> stocks)
-        // {
-        //     _observers = observers;
-        //     _stocks = stocks;
-        // }
-
         public StockProvider()
         {
             _observers = new List<IObserver<Stock>>();
             _stocks = new List<Stock>();
         }
-
         public void AddStock(Stock value)
         {
             if (_stocks.Contains(value))
