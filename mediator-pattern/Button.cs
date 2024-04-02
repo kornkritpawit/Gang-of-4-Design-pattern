@@ -5,11 +5,9 @@ namespace pattern_mediator
     public class Button : UIControl
     {
         private bool _isEnabled;
-
         public Button(DialogBox owner) : base(owner)
         {
         }
-
         public bool IsEnabled
         {
             get
