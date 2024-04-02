@@ -2,21 +2,23 @@ using mediator_pattern;
 
 namespace pattern_mediator
 {
-    public class TextBox : UIControl
+    public class Button : UIControl
     {
-        private string _text;
-        public TextBox(DialogBox owner) : base(owner)
+        private bool _isEnabled;
+
+        public Button(DialogBox owner) : base(owner)
         {
         }
-        public string Text
+
+        public bool IsEnabled
         {
             get
             {
-                return _text;
+                return _isEnabled;
             }
             set
             {
-                _text = value;
+                _isEnabled = value;
                 _owner.OnChanged(this);
             }
         }

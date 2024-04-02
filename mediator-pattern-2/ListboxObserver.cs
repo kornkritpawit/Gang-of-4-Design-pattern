@@ -2,12 +2,10 @@ using mediator_pattern;
 
 namespace pattern_mediator
 {
-    public class ListBox : UIControl
+    public class ListBoxObserver : UIControlObserverPt
     {
         private string _selection;
-        public ListBox(DialogBox owner) : base(owner)
-        {
-        }
+
         public string Selection
         {
             get
@@ -17,7 +15,7 @@ namespace pattern_mediator
             set
             {
                 _selection = value;
-                _owner.OnChanged(this);
+                NotifyEventHandlers();
             }
         }
     }

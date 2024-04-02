@@ -2,21 +2,23 @@ using mediator_pattern;
 
 namespace pattern_mediator
 {
-    public class TextBox : UIControl
+    public class ListBox : UIControl
     {
-        private string _text;
-        public TextBox(DialogBox owner) : base(owner)
+        private string _selection;
+
+        public ListBox(DialogBox owner) : base(owner)
         {
         }
-        public string Text
+
+        public string Selection
         {
             get
             {
-                return _text;
+                return _selection;
             }
             set
             {
-                _text = value;
+                _selection = value;
                 _owner.OnChanged(this);
             }
         }

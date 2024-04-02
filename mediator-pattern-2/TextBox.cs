@@ -5,9 +5,11 @@ namespace pattern_mediator
     public class TextBox : UIControl
     {
         private string _text;
+
         public TextBox(DialogBox owner) : base(owner)
         {
         }
+
         public string Text
         {
             get
