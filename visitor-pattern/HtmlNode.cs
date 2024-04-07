@@ -6,7 +6,5 @@ namespace pattern_visitor
     {
         void Highlight();
         void PlainText();
-
-        // void Execute(Operation operation);
     }
 }
