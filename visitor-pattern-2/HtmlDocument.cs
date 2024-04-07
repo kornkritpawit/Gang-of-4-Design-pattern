@@ -10,15 +10,24 @@ namespace pattern_visitor
         {
             _nodes = new List<HtmlNode>();
         }
+
         public void Add(HtmlNode node)
         {
             _nodes.Add(node);
         }
-        public void Highlight() {
+
+        // public void Highlight() {
+        //     foreach (var node in _nodes)
+        //     {
+        //         node.Highlight();
+        //     }
+        // }
+        public void Execute(Operation operation) {
             foreach (var node in _nodes)
             {
-                node.Highlight();
+                node.Execute(operation);
             }
         }
+
     }
 }

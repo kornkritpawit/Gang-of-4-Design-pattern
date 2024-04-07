@@ -2,7 +2,7 @@ using mediator_pattern;
 
 namespace pattern_mediator
 {
-    public class ListBoxObserver : UIControlObserverPt
+    public class ListBox : UIControl
     {
         private string _selection;
 

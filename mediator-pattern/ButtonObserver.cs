@@ -6,12 +6,9 @@ using pattern_mediator;
 
 namespace mediator_pattern
 {
-    public class ButtonObserver : UIControlObserverPt 
+    public class Button : UIControl
     {
         private bool _isEnabled;
-
-
-
         public bool IsEnabled
         {
             get

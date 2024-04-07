@@ -2,17 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using pattern_visitor;
 
 namespace visitor_pattern
 {
-    public class AnchorNode : HtmlNode
+    public class PlainTextOperation : Operation
     {
-        public void Highlight()
+        public void Apply(HeadingNode node)
         {
-            Console.WriteLine("highlight-anchor");
+            Console.WriteLine("text-heading");
         }
-        public void PlainText()
+
+        public void Apply(AnchorNode node)
         {
             Console.WriteLine("text-anchor");
         }

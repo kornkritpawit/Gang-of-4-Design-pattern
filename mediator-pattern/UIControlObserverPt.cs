@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace pattern_mediator
 {
-    public class UIControlObserverPt
+    public class UIControl
     {
+        // Action ก็คือ function
         private List<Action> _eventHandlers = new List<Action>();
         public void AddEventHandler(Action observer) {
             _eventHandlers.Add(observer);
         }
-
         protected void NotifyEventHandlers() {
             foreach (var eventHandlers in _eventHandlers)
             {

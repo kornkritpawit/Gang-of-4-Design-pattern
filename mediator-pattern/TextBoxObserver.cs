@@ -2,7 +2,7 @@ using mediator_pattern;
 
 namespace pattern_mediator
 {
-    public class TextBoxObserver : UIControlObserverPt
+    public class TextBox : UIControl
     {
         private string _text;
 

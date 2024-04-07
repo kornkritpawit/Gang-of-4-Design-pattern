@@ -10,7 +10,10 @@ namespace pattern_visitor
             var htmlDocument = new HtmlDocument();
             htmlDocument.Add(new HeadingNode());
             htmlDocument.Add(new AnchorNode());
-            htmlDocument.Highlight();
+            // htmlDocument.Highlight();
+
+            htmlDocument.Execute(new HighlightOperation());
+            htmlDocument.Execute(new PlainTextOperation());
         }
     }
 }
