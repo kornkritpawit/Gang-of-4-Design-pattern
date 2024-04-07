@@ -11,7 +11,6 @@ namespace visitor_pattern
         {
             Console.WriteLine("text-heading");
         }
-
         public void Apply(AnchorNode node)
         {
             Console.WriteLine("text-anchor");

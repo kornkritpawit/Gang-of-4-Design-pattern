@@ -11,7 +11,6 @@ namespace visitor_pattern
         {
             Console.WriteLine("highlight-heading");
         }
-
         public void Apply(AnchorNode node)
         {
             Console.WriteLine("highlight-anchor");

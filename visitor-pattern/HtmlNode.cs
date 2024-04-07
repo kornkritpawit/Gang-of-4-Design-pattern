@@ -1,10 +1,10 @@
-using visitor_pattern;
+// using visitor_pattern;
 
-namespace pattern_visitor
-{
-    public interface HtmlNode
-    {
-        void Highlight();
-        void PlainText();
-    }
-}
+// namespace pattern_visitor
+// {
+//     public interface HtmlNode
+//     {
+//         void Highlight();
+//         void PlainText();
+//     }
+// }
