@@ -20,5 +20,6 @@ namespace pattern_visitor
                 node.Highlight();
             }
         }
+        //public void PlainText(){forloop}
     }
 }
