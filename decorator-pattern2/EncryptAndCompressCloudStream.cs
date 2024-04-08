@@ -19,6 +19,7 @@ namespace decorator_pattern
         private string Compress(string data) {
             return data.Substring(0,5);
         }
+
         // เขียนโค้ดซ้ำซ้อน โค้ดเดิม หลายไฟล์
     }
 }
