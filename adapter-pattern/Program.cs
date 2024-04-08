@@ -11,7 +11,7 @@ namespace pattern_adapter
             var image1 = new Image();
             var imageView = new ImageView(image1);
             imageView.Apply(new VividFilter());
-            imageView.Apply(new Caramel()); // Error (third party implement ไม่ได้)
+            // imageView.Apply(new Caramel()); // Error (third party implement ไม่ได้)
         }
 
         // static void Main(string[] args)
