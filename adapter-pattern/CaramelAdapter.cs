@@ -12,7 +12,6 @@ namespace adapter_pattern
         {
             Init();
             Render(image);
-            
         }
     }
 }
