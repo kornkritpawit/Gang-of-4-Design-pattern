@@ -1,14 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+// using System;
+// using System.Collections.Generic;
+// using System.Linq;
+// using System.Threading.Tasks;
 
-namespace decorator_pattern
-{
-    public class CloudStream
-    {
-        public virtual void Write(string data) { //virtual คือให้ subclass Override ได้
-            System.Console.WriteLine("Storing " + data);
-        }
-    }
-}
+// namespace decorator_pattern
+// {
+//     public class CloudStream
+//     {
+//         public virtual void Write(string data) { //virtual คือให้ subclass Override ได้
+//             System.Console.WriteLine("Storing " + data);
+//         }
+//     }
+// }

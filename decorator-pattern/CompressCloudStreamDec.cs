@@ -5,15 +5,13 @@ using System.Threading.Tasks;
 
 namespace decorator_pattern
 {
-    public class CompressCloudStreamDec:  Stream
+    public class CompressCloudStream:  Stream
     {
         private Stream _stream;
-
-        public CompressCloudStreamDec(Stream stream)
+        public CompressCloudStream(Stream stream)
         {
             _stream = stream;
         }
-
         public void Write(string data)
         {
             var compressed = Compress(data);

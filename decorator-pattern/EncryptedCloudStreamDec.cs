@@ -1,20 +1,17 @@
 namespace decorator_pattern
 {
-    public class EncryptedCloudStreamDec : Stream
+    public class EncryptedCloudStream : Stream
     {
         private Stream _stream;
-
-        public EncryptedCloudStreamDec(Stream stream)
+        public EncryptedCloudStream(Stream stream)
         {
             _stream = stream;
         }
-
         public void Write(string data)
         {
             var encrypted = Encrypt(data);
             _stream.Write(encrypted);
         }
-
         private string Encrypt(string data) {
             return "#@#$A%@A#SDD";
         }
