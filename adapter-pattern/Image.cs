@@ -7,6 +7,6 @@ namespace adapter_pattern
 {
     public class Image
     {
-        
+
     }
 }
