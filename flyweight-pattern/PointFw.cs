@@ -2,12 +2,12 @@ using flyweight_pattern;
 
 namespace pattern_flyweight
 {
-    public class PointFw
+    public class Point
     {
         private int x; // 4 bytes
         private int y; // 4 bytes
         private PointIcon icon; // เก็บแยก Structure ออกไป
-        public PointFw(int x, int y, PointIcon icon)
+        public Point(int x, int y, PointIcon icon)
         {
             this.x = x;
             this.y = y;

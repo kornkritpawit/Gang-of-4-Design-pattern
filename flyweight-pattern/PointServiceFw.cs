@@ -8,17 +8,17 @@ using Point = pattern_flyweight.Point;
 
 namespace flyweight_pattern
 {
-    public class PointServiceFw //ใช้เรียก Point จาก Database มา
+    public class PointService //ใช้เรียก Point จาก Database มา
     {
         private PointIconFactory factory;
-        public PointServiceFw(PointIconFactory factory)
+        public PointService(PointIconFactory factory)
         {
             this.factory = factory;
         }
-        public IList<PointFw> GetPoints() {
-            IList<PointFw> points = new List<PointFw>();
+        public IList<Point> GetPoints() {
+            IList<Point> points = new List<Point>();
             // ให้ factory ไปดึงเอารูปที่เคยถูกเอามาใช้แล้ว
-            var point = new PointFw(1,2, factory.GetPointIcon(IconType.CAFE));
+            var point = new Point(1,2, factory.GetPointIcon(IconType.CAFE));
             points.Add(point);
             return points;
         }
