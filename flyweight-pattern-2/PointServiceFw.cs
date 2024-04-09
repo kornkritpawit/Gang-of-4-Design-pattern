@@ -11,10 +11,12 @@ namespace flyweight_pattern
     public class PointServiceFw //ใช้เรียก Point จาก Database มา
     {
         private PointIconFactory factory;
+
         public PointServiceFw(PointIconFactory factory)
         {
             this.factory = factory;
         }
+
         public IList<PointFw> GetPoints() {
             IList<PointFw> points = new List<PointFw>();
             // ให้ factory ไปดึงเอารูปที่เคยถูกเอามาใช้แล้ว

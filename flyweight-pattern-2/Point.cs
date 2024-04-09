@@ -7,6 +7,7 @@ namespace pattern_flyweight
         private IconType type; // 4 bytes
         private byte[] icon; // 20 KB ==> 1000 point = 20MB (กิน mem เยอะมาก)
         // ใน Point มี Icon ถ้าหลาย Point icon ก็จะซ้ำๆ กันมาก
+
         public Point(int x, int y, IconType type, byte[] icon)
         {
             this.x = x;
