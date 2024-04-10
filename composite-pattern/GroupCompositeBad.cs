@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace composite_pattern
 {
-    public class GroupCompositeBad
+    public class Group
     {
         private List<object> _objects;
-        public GroupCompositeBad()
+        public Group()
         {
             _objects = new List<object>();
         }
@@ -25,8 +25,8 @@ namespace composite_pattern
                 if (obj is Shape) {
                     ((Shape)obj).Render(); //Cask Object to Shape
                 }
-                if (obj is GroupCompositeBad) {
-                    ((GroupCompositeBad)obj).Render();
+                if (obj is Group) {
+                    ((Group)obj).Render();
                 }
             }
         }
