@@ -6,10 +6,12 @@ namespace pattern_bridge
         {
             System.Console.WriteLine("Sony : Set channel to " + number);
         }
+
          public override void TurnOff()
         {
             System.Console.WriteLine("Sony : Turn off");
         }
+
         public override void TurnOn()
         {
             System.Console.WriteLine("Sony : Turn on");

@@ -1,19 +1,22 @@
+using bridge_pattern;
+
 namespace pattern_bridge
 {
-    public class SonyAdvanceRemoteControl : AdvancedRemoteControl
+    public class SonyBrand : Device
     {
-        public override void SetChannel(int number)
+        public void SetChannel(int number)
         {
             System.Console.WriteLine("Sony : Set channel to " + number);
         }
-         public override void TurnOff()
+
+        public void TurnOff()
         {
             System.Console.WriteLine("Sony : Turn off");
         }
-        public override void TurnOn()
+
+        public void TurnOn()
         {
             System.Console.WriteLine("Sony : Turn on");
         }
-        //TurnOn() TurnOff() โค้ดซ้ำกับ SonyRemoteControl
     }
 }
