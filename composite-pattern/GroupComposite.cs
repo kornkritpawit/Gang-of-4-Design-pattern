@@ -5,17 +5,15 @@ using System.Threading.Tasks;
 
 namespace composite_pattern
 {
-    public class GroupComposite : Component
+    public class Group : Component
     {
         private List<Component> _components;
-        public GroupComposite() {
+        public Group() {
             _components = new List<Component>();
         }
-
         public void Add(Component obj) {
             _components.Add(obj);
         }
-
         public void Move()
         {
             foreach (var component in _components)
@@ -23,7 +21,6 @@ namespace composite_pattern
                 component.Move();
             }
         }
-
         public void Render() {
             foreach (var component in _components)
             {
