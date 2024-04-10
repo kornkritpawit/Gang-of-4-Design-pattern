@@ -22,11 +22,11 @@ Design1:<br>
 	- pub override void TurnOn(){sys.cwl("Sony : Turn on")}
 	
 ข้อเสียของ แบบนี้:
-- RemoteControl(TurnOn, TurnOff) => SonyRemoteControl, SamsungRemoteControl
-- AdvancedRemoteControl(+SetChannel) => SonyAdvancedRemoteControl,SamsungAdvancedRemoteControl
-- MovieRemoteControl(Play, Pause, Rewind) => SonyMovieRemoteControl, SamsungMovieRemoteControl
-- 1 brand --> add 3 classes Samsung =>RemoteCtrl,AdvanceRemoteCtrl,MovieRemoteCtrl
-- เพิ่ม 10 brands --> add 30 classes,มีการใช้โค้ดซ้ำซ้อนเช่น SonyAdvancedRemoteControl,SonyRemoteControl
+- มี RemoteControl(TurnOn, TurnOff) => สร้าง class SonyRemoteControl, SamsungRemoteControl
+- มี AdvancedRemoteControl(+SetChannel) => สร้างคลาส SonyAdvancedRemoteControl,SamsungAdvancedRemoteControl
+- MovieRemoteControl(Play, Pause, Rewind) => สร้างคลาส SonyMovieRemoteControl, SamsungMovieRemoteControl
+- 1 brand --> สร้าง 3 classes : Samsung =>SamsungRemoteCtrl,SamsungAdvanceRemoteCtrl,SamsungMovieRemoteCtrl
+- มี 10 brands --> สร้าง 30 classes (10x3),มีการใช้โค้ดซ้ำซ้อนเช่น ที่ SonyAdvancedRemoteControl,SonyRemoteControl
 
 Design2:<br>
 - เพิ่ม Interface Device: void TurnOn(); void TurnOff() void SetChannel(int number);
