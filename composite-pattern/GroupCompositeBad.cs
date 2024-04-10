@@ -12,12 +12,10 @@ namespace composite_pattern
         {
             _objects = new List<object>();
         }
-
         public void Add(object obj)
         {
             _objects.Add(obj);
         }
-
         public void Render()
         {
             foreach (var obj in _objects)
