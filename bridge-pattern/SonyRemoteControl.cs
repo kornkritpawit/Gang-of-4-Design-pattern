@@ -6,7 +6,6 @@ namespace pattern_bridge
         {
             System.Console.WriteLine("Sony : Turn off");
         }
-
         public override void TurnOn()
         {
             System.Console.WriteLine("Sony : Turn on");
