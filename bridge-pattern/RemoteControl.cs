@@ -12,9 +12,10 @@ namespace pattern_bridge
 
     // 1 brand --> add 3 classes Samsung =>RemoteCtrl,AdvanceRemoteCtrl,MovieRemoteCtrl
     //เพิ่ม 10 brands --> add 30 classes
-    public abstract class RemoteControl
-    {
-        public abstract void TurnOn();
-        public abstract void TurnOff();
-    }
+    
+   //  public abstract class RemoteControl
+   //  {
+   //      public abstract void TurnOn();
+   //      public abstract void TurnOff();
+   //  }
 }

@@ -7,10 +7,10 @@ namespace pattern_bridge
     {
         static void Main(string[] args)
         {
-            var SonyRemoteControl = new RemoteControlB(new SonyBrand());
-            var SamsungRemoteControl = new RemoteControlB(new SamsungBrand());
-            var SamsungAdvanceRemoteControl = new AdvancedRemoteControlB(new SamsungBrand());
-            var SonyAdvanceRemoteControl = new AdvancedRemoteControlB(new SonyBrand());
+            var SonyRemoteControl = new RemoteControl(new SonyBrand());
+            var SamsungRemoteControl = new RemoteControl(new SamsungBrand());
+            var SamsungAdvanceRemoteControl = new AdvancedRemoteControl(new SamsungBrand());
+            var SonyAdvanceRemoteControl = new AdvancedRemoteControl(new SonyBrand());
             SonyRemoteControl.TurnOn();
             SamsungRemoteControl.TurnOn();
             SamsungAdvanceRemoteControl.TurnOn();

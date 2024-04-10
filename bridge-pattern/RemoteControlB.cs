@@ -5,11 +5,11 @@ namespace pattern_bridge
    // RemoteControl
       // AdvanceRemoteControl
       // MovieRemoteControl
-   public class RemoteControlB
+   public class RemoteControl
    {
       protected Device device;
 
-        public RemoteControlB(Device device)
+        public RemoteControl(Device device)
         {
             this.device = device;
         }

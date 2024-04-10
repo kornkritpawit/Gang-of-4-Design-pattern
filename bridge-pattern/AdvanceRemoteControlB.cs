@@ -2,9 +2,9 @@ using bridge_pattern;
 
 namespace pattern_bridge
 {
-    public class AdvancedRemoteControlB : RemoteControlB
+    public class AdvancedRemoteControl : RemoteControl
     {
-        public AdvancedRemoteControlB(Device device) : base(device)
+        public AdvancedRemoteControl(Device device) : base(device)
         {
         }
 
