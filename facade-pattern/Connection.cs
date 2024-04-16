@@ -8,8 +8,7 @@ namespace facade_pattern
     public class Connection
     {
         public void Disconnect()
-        {
-            
+        {   
         }        
     }
 }

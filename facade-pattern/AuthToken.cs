@@ -7,6 +7,5 @@ namespace facade_pattern
 {
     public class AuthToken
     {
-        
     }
 }
